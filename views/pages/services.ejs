@@ -1,0 +1,171 @@
+<!-- Services Header -->
+<section class="page-header bg-primary text-white py-5">
+    <div class="container">
+        <h1 class="display-4">Our Services</h1>
+        <p class="lead">Comprehensive healthcare technology services tailored to your needs</p>
+    </div>
+</section>
+
+<!-- Services List -->
+<section class="services-list py-5">
+    <div class="container">
+        <% services.forEach(service => { %>
+            <div class="service-item mb-5" id="<%= service.id %>">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="card-title text-primary"><%= service.name %></h2>
+                        <p class="lead"><%= service.description %></p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-8">
+                                <h4>Service Features</h4>
+                                <ul class="list-unstyled feature-list">
+                                    <% service.features.forEach(feature => { %>
+                                        <li class="mb-2">
+                                            <i class="fas fa-check-circle text-success me-2"></i>
+                                            <%= feature %>
+                                        </li>
+                                    <% }) %>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="pricing-box bg-light p-3 rounded">
+                                    <h4>Pricing</h4>
+                                    <p class="h5 text-primary mb-0"><%= service.price %></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <a href="/contact" class="btn btn-primary">Request Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</section>
+
+<!-- Service Process -->
+<section class="service-process bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Service Process</h2>
+        
+        <div class="row">
+            <div class="col-md-3 mb-4">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle mb-3">1</div>
+                    <h4>Consultation</h4>
+                    <p>Initial meeting to understand your needs and requirements</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle mb-3">2</div>
+                    <h4>Assessment</h4>
+                    <p>Thorough analysis of your current systems and processes</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle mb-3">3</div>
+                    <h4>Implementation</h4>
+                    <p>Seamless deployment of solutions and services</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-4">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle mb-3">4</div>
+                    <h4>Support</h4>
+                    <p>Ongoing maintenance and support for optimal performance</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Benefits -->
+<section class="service-benefits py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Benefits of Our Services</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-chart-line fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="card-title text-center">Improved Efficiency</h4>
+                        <p class="card-text">Streamline your healthcare operations with our optimized solutions and expert guidance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="card-title text-center">Enhanced Security</h4>
+                        <p class="card-text">Protect patient data with our comprehensive security measures and compliance expertise.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-users fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="card-title text-center">Expert Support</h4>
+                        <p class="card-text">Access our team of healthcare technology experts for ongoing support and guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications -->
+<section class="certifications bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Certifications</h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-6 mb-4 text-center">
+                <img src="/images/cert-hipaa.png" alt="HIPAA Certified" class="img-fluid mb-2">
+                <h5>HIPAA Certified</h5>
+            </div>
+            
+            <div class="col-md-3 col-6 mb-4 text-center">
+                <img src="/images/cert-iso.png" alt="ISO 27001" class="img-fluid mb-2">
+                <h5>ISO 27001</h5>
+            </div>
+            
+            <div class="col-md-3 col-6 mb-4 text-center">
+                <img src="/images/cert-hitrust.png" alt="HITRUST" class="img-fluid mb-2">
+                <h5>HITRUST</h5>
+            </div>
+            
+            <div class="col-md-3 col-6 mb-4 text-center">
+                <img src="/images/cert-soc2.png" alt="SOC 2 Type II" class="img-fluid mb-2">
+                <h5>SOC 2 Type II</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Need Expert Healthcare Technology Services?</h2>
+        <p class="lead mb-4">Contact us today to discuss how we can help transform your healthcare operations.</p>
+        <a href="/contact" class="btn btn-light btn-lg">Get in Touch</a>
+    </div>
+</section>

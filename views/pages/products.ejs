@@ -1,0 +1,131 @@
+<!-- Products Header -->
+<section class="page-header bg-primary text-white py-5">
+    <div class="container">
+        <h1 class="display-4">Our Products</h1>
+        <p class="lead">Discover our comprehensive suite of healthcare technology solutions</p>
+    </div>
+</section>
+
+<!-- Products List -->
+<section class="products-list py-5">
+    <div class="container">
+        <% products.forEach(product => { %>
+            <div class="product-item mb-5" id="<%= product.id %>">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="<%= product.image %>" alt="<%= product.name %>" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-md-6">
+                        <h2><%= product.name %></h2>
+                        <p class="lead"><%= product.description %></p>
+                        
+                        <h4 class="mt-4">Key Features</h4>
+                        <ul class="list-unstyled feature-list">
+                            <% product.features.forEach(feature => { %>
+                                <li>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <%= feature %>
+                                </li>
+                            <% }) %>
+                        </ul>
+                        
+                        <div class="pricing mt-4">
+                            <h4>Pricing</h4>
+                            <p class="h5 text-primary"><%= product.price %></p>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <a href="/contact" class="btn btn-primary btn-lg me-3">Request Demo</a>
+                            <a href="/contact" class="btn btn-outline-primary btn-lg">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <% if (products.indexOf(product) !== products.length - 1) { %>
+                <hr class="my-5">
+            <% } %>
+        <% }) %>
+    </div>
+</section>
+
+<!-- Technical Specifications -->
+<section class="technical-specs bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Technical Specifications</h2>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Security Features</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-shield-alt text-primary me-2"></i> Multi-layer Encryption</li>
+                            <li><i class="fas fa-lock text-primary me-2"></i> HIPAA Compliance</li>
+                            <li><i class="fas fa-user-shield text-primary me-2"></i> Advanced Access Control</li>
+                            <li><i class="fas fa-history text-primary me-2"></i> Audit Logging</li>
+                            <li><i class="fas fa-database text-primary me-2"></i> Secure Data Storage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">System Requirements</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-server text-primary me-2"></i> Modern Web Browser</li>
+                            <li><i class="fas fa-memory text-primary me-2"></i> 8GB RAM Minimum</li>
+                            <li><i class="fas fa-network-wired text-primary me-2"></i> Stable Internet Connection</li>
+                            <li><i class="fas fa-hdd text-primary me-2"></i> 100GB Storage Space</li>
+                            <li><i class="fas fa-microchip text-primary me-2"></i> Multi-core Processor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Integration & Support -->
+<section class="integration-support py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Integration & Support</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-plug fa-3x text-primary mb-3"></i>
+                    <h4>Easy Integration</h4>
+                    <p>Seamless integration with existing healthcare systems through our comprehensive API.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-hands-helping fa-3x text-primary mb-3"></i>
+                    <h4>24/7 Support</h4>
+                    <p>Round-the-clock technical support from our experienced team of healthcare IT professionals.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
+                    <h4>Training</h4>
+                    <p>Comprehensive training programs for your staff to ensure optimal system utilization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Get Started?</h2>
+        <p class="lead mb-4">Contact us today to schedule a demo or get a customized quote for your healthcare facility.</p>
+        <a href="/contact" class="btn btn-light btn-lg">Contact Us</a>
+    </div>
+</section>

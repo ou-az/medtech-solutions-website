@@ -1,0 +1,151 @@
+<!-- About Header -->
+<section class="page-header bg-primary text-white py-5">
+    <div class="container">
+        <h1 class="display-4">About Us</h1>
+        <p class="lead">Leading the future of healthcare technology</p>
+    </div>
+</section>
+
+<!-- Company Overview -->
+<section class="company-overview py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="/images/company-overview.jpg" alt="Company Overview" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <h2>Our Story</h2>
+                <p class="lead">Founded in <%= companyProfile.founded %>, <%= companyProfile.name %> has been at the forefront of healthcare technology innovation.</p>
+                <p>We are dedicated to revolutionizing healthcare through advanced technology solutions that enhance patient care, improve operational efficiency, and ensure the highest levels of data security.</p>
+                
+                <div class="mt-4">
+                    <h3>Our Mission</h3>
+                    <p><%= companyProfile.mission %></p>
+                    
+                    <h3 class="mt-4">Our Vision</h3>
+                    <p><%= companyProfile.vision %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Values -->
+<section class="company-values bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Core Values</h2>
+        
+        <div class="row">
+            <% companyProfile.values.forEach((value, index) => { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="value-icon mb-3">
+                                <% const icons = ['heart-pulse', 'shield-alt', 'check-circle', 'arrows-spin', 'star']; %>
+                                <i class="fas fa-<%= icons[index] %> fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title"><%= value %></h4>
+                            <p class="card-text">
+                                <%= {
+                                    'Innovation in Healthcare': 'Continuously pushing boundaries to improve patient care through technology.',
+                                    'Patient Data Security': 'Ensuring the highest standards of data protection and privacy.',
+                                    'Regulatory Compliance': 'Maintaining strict adherence to healthcare regulations and standards.',
+                                    'Continuous Improvement': 'Constantly evolving and enhancing our solutions.',
+                                    'Healthcare Excellence': 'Committed to delivering the best healthcare technology solutions.'
+                                }[value] %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Leadership Team</h2>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card team-card h-100">
+                    <img src="/images/team-ceo.jpg" class="card-img-top" alt="CEO">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Dr. Michael Chen</h4>
+                        <p class="text-muted">Chief Executive Officer</p>
+                        <p class="card-text">Former Chief of Medicine with 20+ years of healthcare technology experience.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card team-card h-100">
+                    <img src="/images/team-cto.jpg" class="card-img-top" alt="CTO">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Sarah Thompson</h4>
+                        <p class="text-muted">Chief Technology Officer</p>
+                        <p class="card-text">AI and healthcare technology expert with multiple patents in medical systems.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card team-card h-100">
+                    <img src="/images/team-cso.jpg" class="card-img-top" alt="CSO">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">David Martinez</h4>
+                        <p class="text-muted">Chief Security Officer</p>
+                        <p class="card-text">Cybersecurity veteran specializing in healthcare data protection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Achievements -->
+<section class="achievements bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Achievements</h2>
+        
+        <div class="row text-center">
+            <div class="col-md-3 col-6 mb-4">
+                <div class="achievement-item">
+                    <h3 class="text-primary">500+</h3>
+                    <p>Healthcare Facilities</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6 mb-4">
+                <div class="achievement-item">
+                    <h3 class="text-primary">1M+</h3>
+                    <p>Patients Served</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6 mb-4">
+                <div class="achievement-item">
+                    <h3 class="text-primary">99.9%</h3>
+                    <p>System Uptime</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6 mb-4">
+                <div class="achievement-item">
+                    <h3 class="text-primary">15+</h3>
+                    <p>Industry Awards</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta bg-primary text-white py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">Join Our Journey in Healthcare Innovation</h2>
+        <p class="lead mb-4">Partner with us to transform your healthcare facility with cutting-edge technology.</p>
+        <a href="/contact" class="btn btn-light btn-lg">Contact Us</a>
+    </div>
+</section>
